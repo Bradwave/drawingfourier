@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,45 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Noto+Sans+Math&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Noto+Sans+Math&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
-    
+
     <!-- Highlight.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    
+
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
     <div class="container wide">
         <header>
             <div class="breadcrumb"><a href="index.html">Torna alla Home</a></div>
-            <h1><span class="part-label">Parte 2</span> In cammino con p5.js!</h1>
+            <h1><div><span class="part-label">Parte 2</span><span class="header-difficulty">F (ALPINISMO FACILE)</span></div> In cammino con p5.js!</h1>
         </header>
 
         <div class="page-layout">
             <main>
-                <p><a href="https://p5js.org" target="_blank">p5.js</a> è una <strong>libreria</strong> open-source <strong>JavaScript per la programmazione creativa</strong> e l'esplorazione di idee. Semplifica notevolmente la scrittura di web-app interattive e con focus sugli aspetti grafici.</p>
+                <p><a href="https://p5js.org" target="_blank">p5.js</a> è una <strong>libreria</strong> open-source
+                    <strong>JavaScript per la programmazione creativa</strong> e l'esplorazione di idee. Semplifica
+                    notevolmente la scrittura di web-app interattive e con focus sugli aspetti grafici.
+                </p>
 
-                <p>È possibile consultare tutte le funzioni di p5.js alla pagina web della <strong>documentazione</strong>: <a href="https://p5js.org/reference/" target="_blank">p5js.org/reference</a>.</p>
+                <p>È possibile consultare tutte le funzioni di p5.js alla pagina web della
+                    <strong>documentazione</strong>: <a href="https://p5js.org/reference/"
+                        target="_blank">p5js.org/reference</a>.
+                </p>
 
-                <p>All'apertura dell'<a href="https://editor.p5js.org/" target="_blank">editor online</a>, ci si trova di fronte al codice seguente.</p>
+                <p>All'apertura dell'<a href="https://editor.p5js.org/" target="_blank">editor online</a>, ci si trova
+                    di fronte al codice seguente.</p>
 
-    <pre><code>function setup() {
+                <pre><code>function setup() {
       createCanvas(400, 400);
     }
     
@@ -42,42 +54,69 @@
       background(220);
     }</code></pre>
 
-                <p>Il contenuto della funzione <a href="https://p5js.org/reference/p5/setup/" target="_blank"><code>setup()</code></a> è eseguito una sola volta all'avvio della web-app. La funzione <a href="https://p5js.org/reference/p5/draw/" target="_blank"><code>draw()</code></a> viene eseguita 60 volte al secondo (compatibilmente con il livello di performance della macchina su cui la web-app viene eseguita). Il risultato di ogni esecuzione della funzione <code>draw()</code> è detto <strong>frame</strong>. Si riportano di seguito alcune indicazioni utili per iniziare a programmare.</p>
+                <p>Il contenuto della funzione <a href="https://p5js.org/reference/p5/setup/"
+                        target="_blank"><code>setup()</code></a> è eseguito una sola volta all'avvio della web-app. La
+                    funzione <a href="https://p5js.org/reference/p5/draw/" target="_blank"><code>draw()</code></a> viene
+                    eseguita 60 volte al secondo (compatibilmente con il livello di performance della macchina su cui la
+                    web-app viene eseguita). Il risultato di ogni esecuzione della funzione <code>draw()</code> è detto
+                    <strong>frame</strong>. Si riportano di seguito alcune indicazioni utili per iniziare a programmare.
+                </p>
 
                 <ul>
-                    <li><a href="https://p5js.org/reference/p5/createCanvas/" target="_blank"><code>createCanvas()</code></a> crea una tela su cui possono essere visualizzati elementi grafici; le dimensioni della tela (larghezza e altezza, espresse in pixel) sono indicate tra parentesi — si dice che questi valori sono "passati" alla funzione <code>createCanvas()</code>.</li>
-                    <li>Una volta creata, le dimensioni della tela sono accessibili tramite le variabili <code>width</code> e <code>height</code>.</li>
-                    <li><a href="https://p5js.org/reference/p5/background/" target="_blank"><code>background()</code></a> colora la tela (in questo caso, 220 corrisponde a un grigio chiaro).</li>
-                    <li>È possibile indicare il colore desiderato usando vari sistemi (RGB, HSB, scala di grigi): il più semplice consiste nel digitare il nome del colore tra virgolette, ad esempio <code>"red"</code>; un elenco di colori è disponibile al <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/named-color" target="_blank">seguente link</a>.</li>
+                    <li><a href="https://p5js.org/reference/p5/createCanvas/"
+                            target="_blank"><code>createCanvas()</code></a> crea una tela su cui possono essere
+                        visualizzati elementi grafici; le dimensioni della tela (larghezza e altezza, espresse in pixel)
+                        sono indicate tra parentesi — si dice che questi valori sono "passati" alla funzione
+                        <code>createCanvas()</code>.
+                    </li>
+                    <li>Una volta creata, le dimensioni della tela sono accessibili tramite le variabili
+                        <code>width</code> e <code>height</code>.
+                    </li>
+                    <li><a href="https://p5js.org/reference/p5/background/"
+                            target="_blank"><code>background()</code></a> colora la tela (in questo caso, 220
+                        corrisponde a un grigio chiaro).</li>
+                    <li>È possibile indicare il colore desiderato usando vari sistemi (RGB, HSB, scala di grigi): il più
+                        semplice consiste nel digitare il nome del colore tra virgolette, ad esempio <code>"red"</code>;
+                        un elenco di colori è disponibile al <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/named-color"
+                            target="_blank">seguente link</a>.</li>
                 </ul>
 
                 <h2 id="punti-cerchi">Punti, cerchi, line... <em>from scratch</em></h2>
                 <p>Provate a modificare il codice nell'editor online.</p>
 
                 <ol>
-                    <li>Visualizzate una tela 500x600, di colore blu scuro, e un grande punto giallo al centro della tela. Cercate nella documentazione come disegnare un punto, come colorarlo e come variare la dimensione del punto (suggerimento: cercate <em>stroke</em>...).</li>
-                    <li>Disegnate due punti più piccoli: un punto rosso nell'angolo in alto a sinistra della tela e uno verde nell'angolo in basso a destra. Quindi congiungete i due punti con una linea sottile di colore rosa.</li>
+                    <li>Visualizzate una tela 500x600, di colore blu scuro, e un grande punto giallo al centro della
+                        tela. Cercate nella documentazione come disegnare un punto, come colorarlo e come variare la
+                        dimensione del punto (suggerimento: cercate <em>stroke</em>...).</li>
+                    <li>Disegnate due punti più piccoli: un punto rosso nell'angolo in alto a sinistra della tela e uno
+                        verde nell'angolo in basso a destra. Quindi congiungete i due punti con una linea sottile di
+                        colore rosa.</li>
                     <li>Modificate il codice in modo che il punto rosso segua il mouse.</li>
                 </ol>
 
                 <p>Iniziamo a disegnare qualche circonferenza.</p>
 
                 <ol start="4">
-                    <li>Modificate il codice in modo da visualizzare una circonferenza di raggio \(100\) centrata nel centro della tela. Cercate nella documentazione come disegnare una circonferenza.</li>
+                    <li>Modificate il codice in modo da visualizzare una circonferenza di raggio \(100\) centrata nel
+                        centro della tela. Cercate nella documentazione come disegnare una circonferenza.</li>
                     <li>Rappresentate una circonferenza gialla di raggio \(50\) con centro nel mouse.</li>
                 </ol>
 
                 <h2 id="variabili">Troppe variabili!</h2>
-                <p>In JavaScript, è possibile costruire delle variabili — ovvero degli oggetti che possono mantenere in memoria delle informazioni oppure comportarsi come degli slider Desmos — nel modo seguente.</p>
+                <p>In JavaScript, è possibile costruire delle variabili — ovvero degli oggetti che possono mantenere in
+                    memoria delle informazioni oppure comportarsi come degli slider Desmos — nel modo seguente.</p>
 
-    <pre><code>let a = 5;
+                <pre><code>let a = 5;
     
     // oppure
     var b = 5;</code></pre>
 
-                <p>Le parale chiave <code>let</code> e <code>var</code> consentono di <strong>creare una variabile</strong>. Ponendo il nome della variabile uguale a un certo valore, si assegna questo valore alla variabile. Si consideri il codice seguente:</p>
+                <p>Le parale chiave <code>let</code> e <code>var</code> consentono di <strong>creare una
+                        variabile</strong>. Ponendo il nome della variabile uguale a un certo valore, si assegna questo
+                    valore alla variabile. Si consideri il codice seguente:</p>
 
-    <pre><code>let a; // crea la variabile a, ma non la inizializza
+                <pre><code>let a; // crea la variabile a, ma non la inizializza
     
     a = 2; // assegna ad a il valore 2
     a = 3; // assegna ad a il valore 3
@@ -98,11 +137,11 @@
 
                 <p>Per visualizzare il valore di una variabile è possibile "stamparlo" sulla console:</p>
 
-    <pre><code>console.log(a);</code></pre>
+                <pre><code>console.log(a);</code></pre>
 
                 <p>Osserva il seguente codice.</p>
 
-    <pre><code>let x = 0;
+                <pre><code>let x = 0;
     
     x--;
     
@@ -117,30 +156,55 @@
     x = -x;</code></pre>
 
                 <ol start="5">
-                    <li>Prevedete il valore di <code>a</code> al termine delle operazioni, quindi verificalo usando l'editor online (utilizza <code>console.log()</code> per visualizzare il valore di <em>a</em> nella console). Potete scrivere il codice "al di fuori" delle funzioni <code>setup()</code> e <code>draw()</code> — ovvero nel <em>global scope</em>, per gli intenditori e le intenditrici.</li>
+                    <li>Prevedete il valore di <code>a</code> al termine delle operazioni, quindi verificalo usando
+                        l'editor online (utilizza <code>console.log()</code> per visualizzare il valore di <em>a</em>
+                        nella console). Potete scrivere il codice "al di fuori" delle funzioni <code>setup()</code> e
+                        <code>draw()</code> — ovvero nel <em>global scope</em>, per gli intenditori e le intenditrici.
+                    </li>
                 </ol>
 
                 <p>Introduciamo una variabile che descriverà lo scorrere del tempo, la chiamiamo <em>T</em>.</p>
 
                 <ol start="6">
-                    <li>Create la variabile <code>T</code> "al di fuori" di <code>setup()</code> e <code>draw()</code>, in questo modo sarà accessibile in tutte le parti del programma, quindi assegnate a <code>T</code> valore \(0\) all'avvio dell'app e incrementate di \(0.01\) il valore di <em><code>T</code></em> ad ogni frame.</li>
-                    <li>Create un punto di colore rosa che, partendo dall'angolo in alto a destra dello schermo si muova diagonalmente verso l'angolo in basso a sinistra. La velocità verticale di movimento deve essere doppia rispetto alla velocità di movimento orizzontale.</li>
+                    <li>Create la variabile <code>T</code> "al di fuori" di <code>setup()</code> e <code>draw()</code>,
+                        in questo modo sarà accessibile in tutte le parti del programma, quindi assegnate a
+                        <code>T</code> valore \(0\) all'avvio dell'app e incrementate di \(0.01\) il valore di
+                        <em><code>T</code></em> ad ogni frame.
+                    </li>
+                    <li>Create un punto di colore rosa che, partendo dall'angolo in alto a destra dello schermo si muova
+                        diagonalmente verso l'angolo in basso a sinistra. La velocità verticale di movimento deve essere
+                        doppia rispetto alla velocità di movimento orizzontale.</li>
                 </ol>
 
                 <h2 id="spirografo">Uno spirografo matematico, di nuovo</h2>
-                <p>Ripartiamo da una tela pulita. Da ora in avanti scegliete liberamente i colori per i vari elementi grafici. Mantenete l'implementazione della variabile <code>T</code> che incrementa di 0.01 ad ogni frame.</p>
+                <p>Ripartiamo da una tela pulita. Da ora in avanti scegliete liberamente i colori per i vari elementi
+                    grafici. Mantenete l'implementazione della variabile <code>T</code> che incrementa di 0.01 ad ogni
+                    frame.</p>
 
                 <ol start="8">
-                    <li>Poiché siamo interessati/e a rappresentare fenomeni di rotazione con periodo \(2\pi\), fate in modo che <code>T</code> vari tra 0 e \(2\pi\), tornando a valere \(0\) ogni qualvolta supera \(2\pi\).</li>
-                    <li>Rappresentate un punto \(P_1\) che ruota in senso antiorario a distanza \(100\) dal centro della tela, con velocità angolare \(1\). <em><strong>Nota:</strong></em> per utilizzare seno e coseno occorre digitare <code>Math.sin()</code> e <code>Math.cos()</code> rispettivamente.</li>
+                    <li>Poiché siamo interessati/e a rappresentare fenomeni di rotazione con periodo \(2\pi\), fate in
+                        modo che <code>T</code> vari tra 0 e \(2\pi\), tornando a valere \(0\) ogni qualvolta supera
+                        \(2\pi\).</li>
+                    <li>Rappresentate un punto \(P_1\) che ruota in senso antiorario a distanza \(100\) dal centro della
+                        tela, con velocità angolare \(1\). <em><strong>Nota:</strong></em> per utilizzare seno e coseno
+                        occorre digitare <code>Math.sin()</code> e <code>Math.cos()</code> rispettivamente.</li>
                     <li>Provate a variare la velocità angolare del punto \(P_1\).</li>
-                    <li>Rappresentate, al di sotto del punto \(P_1\), la circonferenza (senza riempimento) lungo cui il punto si muove e un segmento che congiunge il centro della tela con il punto. Per non scrivere troppe volte lo stesso codice e renderlo più leggibile, salvate le coordinate del punto in due variabili <code>x1</code> e <code>y1</code> (all'interno della funzione <code>draw()</code>).</li>
-                    <li>Rappresentate un secondo punto \(P_2\) che ruota a velocità angolare \(-2\) alla distanza di \(50\) dal punto \(P_1\). Salvate le coordinate del punto \(P_2\) nelle variabili <code>x2</code> e <code>y2</code>.</li>
+                    <li>Rappresentate, al di sotto del punto \(P_1\), la circonferenza (senza riempimento) lungo cui il
+                        punto si muove e un segmento che congiunge il centro della tela con il punto. Per non scrivere
+                        troppe volte lo stesso codice e renderlo più leggibile, salvate le coordinate del punto in due
+                        variabili <code>x1</code> e <code>y1</code> (all'interno della funzione <code>draw()</code>).
+                    </li>
+                    <li>Rappresentate un secondo punto \(P_2\) che ruota a velocità angolare \(-2\) alla distanza di
+                        \(50\) dal punto \(P_1\). Salvate le coordinate del punto \(P_2\) nelle variabili
+                        <code>x2</code> e <code>y2</code>.
+                    </li>
                 </ol>
 
-                <p>Vorremmo ora rappresentare il percorso tracciato da \(P_2\). Per farlo, occorre utilizzare i <em>vettori</em>, che funzionano in modo del tutto analogo alle liste di Desmos.</p>
+                <p>Vorremmo ora rappresentare il percorso tracciato da \(P_2\). Per farlo, occorre utilizzare i
+                    <em>vettori</em>, che funzionano in modo del tutto analogo alle liste di Desmos.
+                </p>
 
-    <pre><code>let v = [1, 1, 2, 3, 5, 8]; // viene creato il vettore v
+                <pre><code>let v = [1, 1, 2, 3, 5, 8]; // viene creato il vettore v
     console.log(v[4]); // viene stampato il valore del vettore nella posizione 4
     // in questo caso v[4] = 5 (la prima posizione è la posizione 0)
     
@@ -163,14 +227,25 @@
     
     v = []; // svuota il vettore</code></pre>
 
-                <p>L'ultima parte del codice <code>for(...) { ... }</code> si chiama <em>ciclo for</em> e consente di ripetere delle linee di codice un certo numero di volte. La variabile <code>i</code> si chiama <em>indice</em> e, in questo caso, parte dal valore 0 e incrementa di 1 ad ogni ripetizione del ciclo fino a quando raggiunge il valore <code>v.length</code>, ovvero la lunghezza del vettore <code>v</code>.</p>
+                <p>L'ultima parte del codice <code>for(...) { ... }</code> si chiama <em>ciclo for</em> e consente di
+                    ripetere delle linee di codice un certo numero di volte. La variabile <code>i</code> si chiama
+                    <em>indice</em> e, in questo caso, parte dal valore 0 e incrementa di 1 ad ogni ripetizione del
+                    ciclo fino a quando raggiunge il valore <code>v.length</code>, ovvero la lunghezza del vettore
+                    <code>v</code>.
+                </p>
 
                 <ol start="13">
-                    <li>Create, al di fuori di <code>setup()</code> e <code>draw()</code>, due vettori vuoti <code>pathX</code> e <code>pathY</code>, che conterranno rispettivamente le coordinate <code>x2</code> e <code>y2</code> del punto \(P_2\). Ad ogni frame aggiungi <code>x2</code> al fondo di <code>pathX</code> e <code>y2</code> al fondo <code>pathY</code>. Fai in modo che i due vettori vengano svuotati ogni volta che la variabile <code>T</code> torna a valere 0.</li>
-                    <li>Utilizzando un ciclo for, rappresentate il tracciato del punto \(P_2\). Per farlo, potrebbero essere utili i seguenti comandi.</li>
+                    <li>Create, al di fuori di <code>setup()</code> e <code>draw()</code>, due vettori vuoti
+                        <code>pathX</code> e <code>pathY</code>, che conterranno rispettivamente le coordinate
+                        <code>x2</code> e <code>y2</code> del punto \(P_2\). Ad ogni frame aggiungi <code>x2</code> al
+                        fondo di <code>pathX</code> e <code>y2</code> al fondo <code>pathY</code>. Fai in modo che i due
+                        vettori vengano svuotati ogni volta che la variabile <code>T</code> torna a valere 0.
+                    </li>
+                    <li>Utilizzando un ciclo for, rappresentate il tracciato del punto \(P_2\). Per farlo, potrebbero
+                        essere utili i seguenti comandi.</li>
                 </ol>
 
-    <pre><code>beginShape(); // inizia la costruzione di una figura geometrica
+                <pre><code>beginShape(); // inizia la costruzione di una figura geometrica
     vertex(a, b); // definisce il vertice (a, b) della figura
     vertex(c, d); // definisce il vertice (c, d)
     vertex(e, f); // definisce il vertice (e, f)
@@ -186,10 +261,14 @@
                 </a>
 
                 <ol start="15">
-                    <li>Create ora una sequenza di punti che ruotano uno attorno all'altro utilizzando come raggi di rotazione e velocità angolari i valori contenuti nei vettori <code>r</code> e <code>v</code> che seguono (il primo punto ruota intorno al centro della tela). Congiungete i punti con dei segmenti e mostrate le circonferenze lungo cui i punti ruotano. Infine, rappresentate la traccia percorsa dall'ultimo punto.</li>
+                    <li>Create ora una sequenza di punti che ruotano uno attorno all'altro utilizzando come raggi di
+                        rotazione e velocità angolari i valori contenuti nei vettori <code>r</code> e <code>v</code> che
+                        seguono (il primo punto ruota intorno al centro della tela). Congiungete i punti con dei
+                        segmenti e mostrate le circonferenze lungo cui i punti ruotano. Infine, rappresentate la traccia
+                        percorsa dall'ultimo punto.</li>
                 </ol>
 
-    <pre><code>let R = [100, 50, 40, 20, 10, 20];
+                <pre><code>let R = [100, 50, 40, 20, 10, 20];
     let v = [1, 2, 3, -1, -2, -3];</code></pre>
 
                 <ol start="16">
@@ -197,10 +276,11 @@
                     <li>Sfasate la rotazione dei punti dei seguenti valori.</li>
                 </ol>
 
-    <pre><code>let phi = [0.1, 0, 0, 2, 3.14, 4];</code></pre>
+                <pre><code>let phi = [0.1, 0, 0, 2, 3.14, 4];</code></pre>
 
                 <ol start="18">
-                    <li>Variate i valori di <code>R</code>, <code>v</code> e <code>phi</code> e il numero di elementi dei vettori.</li>
+                    <li>Variate i valori di <code>R</code>, <code>v</code> e <code>phi</code> e il numero di elementi
+                        dei vettori.</li>
                 </ol>
 
                 <a href="https://editor.p5js.org/bradwave.mb/sketches/GRaOal4a-" class="segnavia-box" target="_blank">
@@ -211,16 +291,20 @@
                     </div>
                 </a>
             </main>
-            
+
             <aside class="sidebar">
                 <nav class="sidebar-nav">
                     <h4><span class="material-symbols-outlined">article</span> Indice</h4>
                     <ul>
                         <li><a href="index.html"><span class="material-symbols-outlined">home</span> Home</a></li>
-                        <li><a href="intro-desmos.html"><span class="part-label">Parte 1</span> Primi passi con Desmos</a></li>
-                        <li><a href="intro-p5.html" class="current"><span class="part-label">Parte 2</span> In cammino con p5.js!</a></li>
-                        <li><a href="trasformando-con-fourier.html"><span class="part-label">Parte 3</span> Trasformando con Fourier</a></li>
-                        <li><a href="fourier-mano-libera.html"><span class="part-label">Parte 4</span> Fourier a mano libera</a></li>
+                        <li><a href="intro-desmos.html"><span class="part-label">Parte 1</span> Primi passi con
+                                Desmos</a></li>
+                        <li><a href="intro-p5.html" class="current"><span class="part-label">Parte 2</span> In cammino
+                                con p5.js!</a></li>
+                        <li><a href="trasformando-con-fourier.html"><span class="part-label">Parte 3</span> Trasformando
+                                con Fourier</a></li>
+                        <li><a href="fourier-mano-libera.html"><span class="part-label">Parte 4</span> Fourier a mano
+                                libera</a></li>
                     </ul>
                 </nav>
                 <nav class="sidebar-toc">
@@ -233,7 +317,7 @@
                 </nav>
             </aside>
         </div>
-        
+
         <footer>
             <p>Dobbiamo sapere, sapremo.</p>
             <cite>David Hilbert</cite>
@@ -242,4 +326,5 @@
         <script src="assets/js/scrollspy.js"></script>
     </div>
 </body>
+
 </html>
