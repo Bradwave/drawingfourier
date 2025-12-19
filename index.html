@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disegnare con Fourier - Matephis</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Noto+Sans+Math&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+</head>
+
+<body class="home-page">
+    <div class="container">
+        <header class="hero">
+            <h1>Disegnare con Fourier</h1>
+            <p style="font-family: var(--font-title);">Come ricreare un qualunque disegno tramite una serie di Fourier.</p>
+        </header>
+
+        <section>
+            <h2>Percorso Didattico</h2>
+            <div class="cards-grid">
+                <!-- Parte 1 -->
+                <a href="intro-desmos.html" class="card">
+                    <div class="difficulty">EE (ESCURSIONISMO ESPERTI)</div>
+                    <h3><span class="part-label">Parte 1</span> Primi passi con Desmos</h3>
+                    <span class="card-objectives-title">Obiettivi:</span>
+                    <ul class="card-objectives">
+                        <li>Introdurre i rudimenti di Desmos (variabili, slider).</li>
+                        <li>Rappresentare curve in forma parametrica.</li>
+                        <li>Rappresentare polinomi trigonometrici.</li>
+                        <li>Approssimare disegni con la serie di Fourier.</li>
+                    </ul>
+                    <span class="card-link">Vai all'attività</span>
+                </a>
+
+                <!-- Parte 2 -->
+                <a href="intro-p5.html" class="card">
+                    <div class="difficulty">F (ALPINISMO FACILE)</div>
+                    <h3><span class="part-label">Parte 2</span> In cammino con p5.js!</h3>
+                    <span class="card-objectives-title">Obiettivi:</span>
+                    <ul class="card-objectives">
+                        <li>Rappresentare punti, linee e circonferenze in una web-app.</li>
+                        <li>Introdurre i concetti di variabile e vettore in javascript.</li>
+                        <li>Rappresentare polinomi trigonometrici (in un nuovo modo).</li>
+                    </ul>
+                    <span class="card-link">Vai all'attività</span>
+                </a>
+
+                <!-- Parte 3 -->
+                <a href="trasformando-con-fourier.html" class="card">
+                    <div class="difficulty">PD (ALPINISMO POCO DIFFICILE)</div>
+                    <h3><span class="part-label">Parte 3</span> Trasformando con Fourier</h3>
+                    <span class="card-objectives-title">Obiettivi:</span>
+                    <ul class="card-objectives">
+                        <li>Applicare la trasformata discreta di Fourier.</li>
+                        <li>Rappresentare una funzione con una serie di Fourier.</li>
+                        <li>Controllare il numero di coefficienti con uno slider.</li>
+                    </ul>
+                    <span class="card-link">Vai all'attività</span>
+                </a>
+
+                <!-- Parte 4 -->
+                <a href="fourier-mano-libera.html" class="card">
+                    <div class="difficulty">D (ALPINISMO DIFFICILE)</div>
+                    <h3><span class="part-label">Parte 4</span> Fourier a mano libera</h3>
+                    <span class="card-objectives-title">Obiettivi:</span>
+                    <ul class="card-objectives">
+                        <li>Consentire all'utente di disegnare con il mouse.</li>
+                        <li>Rappresentare il disegno definito dall'utente con una serie di Fourier.</li>
+                    </ul>
+                    <span class="card-link">Vai all'attività</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Strumenti Interattivi</h2>
+            <div class="app-grid">
+                <a href="https://drawxy.matephis.com" class="app-card" target="_blank">
+                    <div class="app-card-header">
+                        <div class="app-card-icon">
+                            <img src="assets/icons/drawxy.svg" alt="icon">
+                        </div>
+                        <div class="app-card-title">DrawXY</div>
+                    </div>
+                    <p>Disegna curve e ottieni i coefficienti.</p>
+                </a>
+
+                <a href="https://freehandfourier.matephis.com" class="app-card" target="_blank">
+                    <div class="app-card-header">
+                        <div class="app-card-icon">
+                            <img src="assets/icons/freehandfourier.svg" alt="icon">
+                        </div>
+                        <div class="app-card-title">Freehand Fourier</div>
+                    </div>
+                    <p>Disegna a mano libera e guarda la serie di Fourier.</p>
+                </a>
+
+                <a href="https://trigonopoly.matephis.com" class="app-card" target="_blank">
+                    <div class="app-card-header">
+                        <div class="app-card-icon">
+                            <!-- Adjusted size for this icon specifically -->
+                            <span class="material-symbols-outlined" style="font-size: 20px;">category</span>
+                        </div>
+                        <div class="app-card-title">Trigonopoly</div>
+                    </div>
+                    <p>Esplora le funzioni trigonometriche.</p>
+                </a>
+
+                <a href="https://complexp.matephis.com" class="app-card" target="_blank">
+                    <div class="app-card-header">
+                        <div class="app-card-icon">
+                            <img src="assets/icons/complexp.svg" alt="icon">
+                        </div>
+                        <div class="app-card-title">ComplexP</div>
+                    </div>
+                    <p>Visualizza numeri complessi ed esponenziali.</p>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Dobbiamo sapere, sapremo.</p>
+            <cite>David Hilbert</cite>
+        </footer>
+    </div>
+</body>
+
+</html>

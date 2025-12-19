@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 4 — Fourier a mano libera - Matephis</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Noto+Sans+Math&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+    
+    <!-- Highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container wide">
+        <header>
+            <div class="breadcrumb"><a href="index.html">Torna alla Home</a></div>
+            <h1><span class="part-label">Parte 4</span> Fourier a mano libera</h1>
+        </header>
+
+        <div class="page-layout">
+            <main>
+                <p>Vorremmo implementare direttamente all'interno della nostra applicazione la possibilità di creare un disegno e rappresentarlo attraverso una serie di Fourier.</p>
+                
+                <h2 id="piano">Piano di implementazione</h2>
+                <p>Si propone il seguente piano di implementazione:</p>
+                <ul>
+                    <li>l'utente disegna sulla tela tenendo premuto il tasto sinistro del mouse e vengono salvate le coordinate \(x\) e \(y\) del mouse in due vettori <code>drawingX</code> e <code>drawingY</code>;</li>
+                    <li>quando il tasto sinistro è rilasciato, si applica la trasformata di Fourier;</li>
+                    <li>quando il tasto sinistro è nuovamente premuto si resettano i valori di <code>drawingX</code>, <code>drawingY</code>, <code>v</code>, <code>R</code>, <code>phi</code>, <code>pathX</code> e <code>pathY</code> (che contengono le coordinate \(x\) e \(y\) dell'ultimo punto rotante, ovvero quello che traccia l'immagine del polinomio trigonometrico che approssima la serie di Fourier).</li>
+                </ul>
+
+                <h2 id="interazione">Gestire l'interazione</h2>
+                <p>È necessario implementare dei <em>listener</em>, delle funzioni "in ascolto", che vengono eseguite quando si verifica un particolare evento, come l'interazione dell'utente con l'applicazione. Occorre che questi <em>listener</em> agiscano solo sulla tela e non sullo slider che controlla il numero di coefficienti impiegati.</p>
+
+                <ol>
+                    <li>Per implementare le feature desiderate, considerate il seguente spunto.</li>
+                </ol>
+
+    <pre><code>let canvas; // salviamo la tela in una variabile
+    
+    /* true se il tasto sinistro è premuto, falso altrimenti */
+    let isMousePressed = true;
+    
+    
+    function setup() {
+      canvas = createCanvas(600, 600);
+    
+      canvas.mousePressed(canvasMousePressed);
+      canvas.mouseReleased(canvasMouseReleased);
+    
+      /* ... */
+    }
+    
+    /* ... */
+    
+    function mouseDragged() {
+      if (isMousePressed) {
+        /* vengono salvate le coordinate del mouse */
+      }
+    }
+    
+    function canvasMousePressed() {
+      isMousePressed = true;
+      
+      /* ... */
+    }
+    
+    function canvasMouseReleased() {
+      isMousePressed = false;
+      
+      /* ... */
+    }</code></pre>
+
+                <h2 id="lavoro">Al lavoro!</h2>
+                <p>Create una copia dell'ultima tela p5.js.</p>
+
+                <ol start="2">
+                    <li>Modificate il codice scritto in precedenza in modo da consentire all'utente di creare un disegno e ricostruirlo tramite una serie di Fourier.</li>
+                </ol>
+
+                <a href="https://editor.p5js.org/bradwave.mb/sketches/PkSBX542-" class="segnavia-box" target="_blank">
+                    <span class="material-symbols-outlined segnavia-icon">hiking</span>
+                    <div class="segnavia-content">
+                        <strong>Avete smarrito il sentiero?</strong>
+                        <span class="segnavia-action">Ecco un segnavia</span>
+                    </div>
+                </a>
+            </main>
+            
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <h4><span class="material-symbols-outlined">article</span> Indice</h4>
+                    <ul>
+                        <li><a href="index.html"><span class="material-symbols-outlined">home</span> Home</a></li>
+                        <li><a href="intro-desmos.html"><span class="part-label">Parte 1</span> Primi passi con Desmos</a></li>
+                        <li><a href="intro-p5.html"><span class="part-label">Parte 2</span> In cammino con p5.js!</a></li>
+                        <li><a href="trasformando-con-fourier.html"><span class="part-label">Parte 3</span> Trasformando con Fourier</a></li>
+                        <li><a href="fourier-mano-libera.html" class="current"><span class="part-label">Parte 4</span> Fourier a mano libera</a></li>
+                    </ul>
+                </nav>
+                <nav class="sidebar-toc">
+                    <h4><span class="material-symbols-outlined">toc</span> In questa attività</h4>
+                    <ul>
+                        <li><a href="#piano">Piano di implementazione</a></li>
+                        <li><a href="#interazione">Gestire l'interazione</a></li>
+                        <li><a href="#lavoro">Al lavoro!</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        
+        <footer>
+            <p>Dobbiamo sapere, sapremo.</p>
+            <cite>David Hilbert</cite>
+        </footer>
+        <script src="assets/js/copy-code.js"></script>
+        <script src="assets/js/scrollspy.js"></script>
+    </div>
+</body>
+</html>
