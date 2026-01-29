@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 </head>
 
 <body class="home-page">
@@ -29,53 +29,52 @@
             <h2>Percorso didattico</h2>
             <div class="cards-grid">
                 <!-- Parte 1 -->
-                <a href="intro-desmos.html" class="card">
+                <a href="primi-passi-con-desmos.html" class="card">
                     <div class="difficulty">EE (ESCURSIONISMO ESPERTI)</div>
                     <h3><span class="part-label">Parte 1</span> Primi passi con Desmos</h3>
                     <span class="card-objectives-title">Obiettivi:</span>
                     <ul class="card-objectives">
-                        <li>Introdurre i rudimenti di Desmos (variabili, slider).</li>
-                        <li>Rappresentare curve in forma parametrica.</li>
-                        <li>Rappresentare polinomi trigonometrici.</li>
-                        <li>Approssimare disegni con la serie di Fourier.</li>
+                        <li>Introdurre Desmos (variabili, slider).</li>
+                        <li>Rappresentare curve parametriche e polinomi trigonometrici.</li>
+                        <li>Approssimare disegni con serie di Fourier.</li>
                     </ul>
                     <span class="card-link">Vai all'attività</span>
                 </a>
 
                 <!-- Parte 2 -->
-                <a href="intro-p5.html" class="card">
+                <a href="disegnare-di-tutto-con-desmos.html" class="card">
                     <div class="difficulty">F (ALPINISMO FACILE)</div>
-                    <h3><span class="part-label">Parte 2</span> In cammino con p5.js!</h3>
+                    <h3><span class="part-label">Parte 2</span> Disegnare di tutto con Desmos</h3>
                     <span class="card-objectives-title">Obiettivi:</span>
                     <ul class="card-objectives">
-                        <li>Rappresentare punti, linee e circonferenze in una web-app.</li>
-                        <li>Introdurre i concetti di variabile e vettore in javascript.</li>
-                        <li>Rappresentare polinomi trigonometrici (in un nuovo modo).</li>
+                        <li>Applicare la trasformata di Fourier.</li>
+                        <li>Rappresentare disegni con serie di Fourier.</li>
+                        <li>Controllare coefficienti tramite slider.</li>
                     </ul>
                     <span class="card-link">Vai all'attività</span>
                 </a>
 
                 <!-- Parte 3 -->
-                <a href="trasformando-con-fourier.html" class="card">
-                    <div class="difficulty">PD (ALPINISMO POCO DIFFICILE)</div>
-                    <h3><span class="part-label">Parte 3</span> Trasformando con Fourier</h3>
+                <a href="in-cammino-con-p5.html" class="card">
+                    <div class="difficulty">D (ALPINISMO DIFFICILE)</div>
+                    <h3><span class="part-label">Parte 3</span> In cammino con p5.js!</h3>
                     <span class="card-objectives-title">Obiettivi:</span>
                     <ul class="card-objectives">
-                        <li>Applicare la trasformata discreta di Fourier.</li>
-                        <li>Rappresentare una funzione con una serie di Fourier.</li>
-                        <li>Controllare il numero di coefficienti con uno slider.</li>
+                        <li>Rappresentare elementi grafici in una web-app.</li>
+                        <li>Introdurre variabili e vettori in JavaScript.</li>
+                        <li>Visualizzare polinomi trigonometrici.</li>
                     </ul>
                     <span class="card-link">Vai all'attività</span>
                 </a>
 
                 <!-- Parte 4 -->
                 <a href="fourier-mano-libera.html" class="card">
-                    <div class="difficulty">D (ALPINISMO DIFFICILE)</div>
+                    <div class="difficulty">TD (ALPINISMO MOLTO DIFFICILE)</div>
                     <h3><span class="part-label">Parte 4</span> Fourier a mano libera</h3>
                     <span class="card-objectives-title">Obiettivi:</span>
                     <ul class="card-objectives">
-                        <li>Consentire all'utente di disegnare con il mouse.</li>
-                        <li>Rappresentare il disegno definito dall'utente con una serie di Fourier.</li>
+                        <li>Disegnare con il mouse.</li>
+                        <li>Rappresentare il disegno tramite serie di Fourier con trasformata discreta.</li>
                     </ul>
                     <span class="card-link">Vai all'attività</span>
                 </a>
@@ -116,14 +115,14 @@
                     <p>Esplora i polinomi trigonometrici.</p>
                 </a>
 
-                <a href="https://complexp.matephis.com" class="app-card" target="_blank">
+                <a href="https://motus2d.matephis.com" class="app-card" target="_blank">
                     <div class="app-card-header">
                         <div class="app-card-icon">
-                            <img src="assets/icons/complexp.svg" alt="icon">
+                            <img src="assets/icons/motus2d.svg" alt="icon">
                         </div>
-                        <div class="app-card-title">COMPLEXP</div>
+                        <div class="app-card-title">MOTUS2D</div>
                     </div>
-                    <p>Visualizza l'esponenziale complesso.</p>
+                    <p>Visualizza il moto in 2D.</p>
                 </a>
 
                 <a href="https://www.desmos.com" class="app-card" target="_blank">
@@ -146,6 +145,16 @@
                     <p>Libreria JavaScript per il creative coding.</p>
                 </a>
             </div>
+        </section>
+
+        <section class="version-note">
+            <p style="font-size: 0.9rem; color: #666; text-align: center;">
+                <span class="material-symbols-outlined" style="font-size: 1em; vertical-align: middle;">history</span>
+                La versione precedente delle attività è disponibile su <a href="https://github.com/Bradwave/drawingfourier" target="_blank">GitHub</a> (tag <code>v1.0-december25</code>).
+            </p>
+            <p style="font-size: 0.75rem; color: #999; text-align: center; margin-top: 0.5rem;">
+                Per eseguire la versione precedente: clona il repository, quindi esegui <code>git checkout v1.0-december25</code>.
+            </p>
         </section>
 
         <footer>

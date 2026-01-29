@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parte 2 — In cammino con p5.js! - Matephis</title>
+    <title>Parte 3 — In cammino con p5.js! - Matephis</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
     <!-- Highlight.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -28,7 +28,7 @@
     <div class="container wide">
         <header>
             <div class="breadcrumb"><a href="index.html">Torna alla Home</a></div>
-            <h1><div><span class="part-label">Parte 2</span><span class="header-difficulty">F (ALPINISMO FACILE)</span></div> In cammino con p5.js!</h1>
+            <h1><div><span class="part-label">Parte 3</span><span class="header-difficulty">D (ALPINISMO DIFFICILE)</span></div> In cammino con p5.js!</h1>
         </header>
 
         <div class="page-layout">
@@ -47,12 +47,12 @@
                     di fronte al codice seguente.</p>
 
                 <pre><code>function setup() {
-      createCanvas(400, 400);
-    }
-    
-    function draw() {
-      background(220);
-    }</code></pre>
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}</code></pre>
 
                 <p>Il contenuto della funzione <a href="https://p5js.org/reference/p5/setup/"
                         target="_blank"><code>setup()</code></a> è eseguito una sola volta all'avvio della web-app. La
@@ -108,60 +108,67 @@
                     memoria delle informazioni oppure comportarsi come degli slider Desmos — nel modo seguente.</p>
 
                 <pre><code>let a = 5;
-    
-    // oppure
-    var b = 5;</code></pre>
 
-                <p>Le parale chiave <code>let</code> e <code>var</code> consentono di <strong>creare una
+// oppure
+var b = 5;</code></pre>
+
+                <p>Le parole chiave <code>let</code> e <code>var</code> consentono di <strong>creare una
                         variabile</strong>. Ponendo il nome della variabile uguale a un certo valore, si assegna questo
                     valore alla variabile. Si consideri il codice seguente:</p>
 
                 <pre><code>let a; // crea la variabile a, ma non la inizializza
-    
-    a = 2; // assegna ad a il valore 2
-    a = 3; // assegna ad a il valore 3
-    
-    a++; // incrementa di 1 il valore di a
-    
-    a += 3; // incrementa di 3 il valore di a
-    a -= 2; // decrementa di 2 il valore di a
-    
-    // esegue il codice compreso nella prima coppia di parentesi graffe
-    // se a è uguale a 5 (notare il doppio segno di uguaglianza!)
-    if (a == 5) {
-    	a = a * 2 - 1; // moltiplica a per 2 e sottrae 1 
-    } else {
-    	// il codice seguente viene eseguito solo se a è diverso da 5
-    	a = -a; // a diventa uguale al suo opposto;
-    }</code></pre>
+
+a = 2; // assegna ad a il valore 2
+a = 3; // assegna ad a il valore 3
+
+a++; // incrementa di 1 il valore di a
+
+a += 3; // incrementa di 3 il valore di a
+a -= 2; // decrementa di 2 il valore di a
+
+// esegue il codice compreso nella prima coppia di parentesi graffe
+// se a è uguale a 5 (notare il doppio segno di uguaglianza!)
+if (a == 5) {
+	a = a * 2 - 1; // moltiplica a per 2 e sottrae 1 
+} else {
+	// il codice seguente viene eseguito solo se a è diverso da 5
+	a = -a; // a diventa uguale al suo opposto;
+}</code></pre>
 
                 <p>Per visualizzare il valore di una variabile è possibile "stamparlo" sulla console:</p>
 
                 <pre><code>console.log(a);</code></pre>
 
-                <p>Osserva il seguente codice.</p>
+                <p>Osservate il seguente codice.</p>
 
                 <pre><code>let x = 0;
-    
-    x--;
-    
-    if(x < 0) {
-    	x += x;
-    } else {
-    	x -= 2; 
-    }
-    
-    x = x / 2 + 3;
-    x++;
-    x = -x;</code></pre>
+
+x--;
+
+if(x < 0) {
+	x += x;
+} else {
+	x -= 2; 
+}
+
+x = x / 2 + 3;
+x++;
+x = -x;</code></pre>
 
                 <ol start="5">
-                    <li>Prevedete il valore di <code>a</code> al termine delle operazioni, quindi verificalo usando
-                        l'editor online (utilizza <code>console.log()</code> per visualizzare il valore di <em>a</em>
+                    <li>Prevedete il valore di <code>x</code> al termine delle operazioni, quindi verificatelo usando
+                        l'editor online (utilizzate <code>console.log()</code> per visualizzare il valore di <em>x</em>
                         nella console). Potete scrivere il codice "al di fuori" delle funzioni <code>setup()</code> e
                         <code>draw()</code> — ovvero nel <em>global scope</em>, per gli intenditori e le intenditrici.
                     </li>
                 </ol>
+
+                <details>
+                    <summary>Soluzione</summary>
+                    <p>
+                        <code>x = -4</code>. Infatti: <code>x = 0</code> → <code>x = -1</code> → <code>x = -2</code> (ramo <code>if</code>) → <code>x = 2</code> → <code>x = 3</code> → <code>x = -3</code>... Ops, c'era un errore! Ricontrollate il calcolo.
+                    </p>
+                </details>
 
                 <p>Introduciamo una variabile che descriverà lo scorrere del tempo, la chiamiamo <em>T</em>.</p>
 
@@ -205,27 +212,27 @@
                 </p>
 
                 <pre><code>let v = [1, 1, 2, 3, 5, 8]; // viene creato il vettore v
-    console.log(v[4]); // viene stampato il valore del vettore nella posizione 4
-    // in questo caso v[4] = 5 (la prima posizione è la posizione 0)
-    
-    v.push(13); // aggiunge 13 in fondo al vettore
-    // il vettore diventa [1, 1, 2, 3, 5, 8, 13]
-    
-    v.pop(); // rimuove l'ultimo elemento del vettore
-    // il vettore diventa [1, 1, 2, 3, 5, 8]
-    
-    v.unshift(0); // aggiunge 0 all'inizio del vettore
-    // il vettore diventa [0, 1, 1, 2, 3, 5, 8]
-    
-    v.shift() // rimuove il primo elemento del vettore
-    // il vettore diventa [1, 1, 2, 3, 5, 8]
-    
-    // ripete l'operazione console.log(...) per ogni elemento del vettore
-    for(let i = 0; i < v.length; i++) {
-    	console.log(v[i]); // stampa
-    }
-    
-    v = []; // svuota il vettore</code></pre>
+console.log(v[4]); // viene stampato il valore del vettore nella posizione 4
+// in questo caso v[4] = 5 (la prima posizione è la posizione 0)
+
+v.push(13); // aggiunge 13 in fondo al vettore
+// il vettore diventa [1, 1, 2, 3, 5, 8, 13]
+
+v.pop(); // rimuove l'ultimo elemento del vettore
+// il vettore diventa [1, 1, 2, 3, 5, 8]
+
+v.unshift(0); // aggiunge 0 all'inizio del vettore
+// il vettore diventa [0, 1, 1, 2, 3, 5, 8]
+
+v.shift() // rimuove il primo elemento del vettore
+// il vettore diventa [1, 1, 2, 3, 5, 8]
+
+// ripete l'operazione console.log(...) per ogni elemento del vettore
+for(let i = 0; i < v.length; i++) {
+	console.log(v[i]); // stampa
+}
+
+v = []; // svuota il vettore</code></pre>
 
                 <p>L'ultima parte del codice <code>for(...) { ... }</code> si chiama <em>ciclo for</em> e consente di
                     ripetere delle linee di codice un certo numero di volte. La variabile <code>i</code> si chiama
@@ -237,8 +244,8 @@
                 <ol start="13">
                     <li>Create, al di fuori di <code>setup()</code> e <code>draw()</code>, due vettori vuoti
                         <code>pathX</code> e <code>pathY</code>, che conterranno rispettivamente le coordinate
-                        <code>x2</code> e <code>y2</code> del punto \(P_2\). Ad ogni frame aggiungi <code>x2</code> al
-                        fondo di <code>pathX</code> e <code>y2</code> al fondo <code>pathY</code>. Fai in modo che i due
+                        <code>x2</code> e <code>y2</code> del punto \(P_2\). Ad ogni frame aggiungete <code>x2</code> al
+                        fondo di <code>pathX</code> e <code>y2</code> al fondo <code>pathY</code>. Fate in modo che i due
                         vettori vengano svuotati ogni volta che la variabile <code>T</code> torna a valere 0.
                     </li>
                     <li>Utilizzando un ciclo for, rappresentate il tracciato del punto \(P_2\). Per farlo, potrebbero
@@ -246,11 +253,11 @@
                 </ol>
 
                 <pre><code>beginShape(); // inizia la costruzione di una figura geometrica
-    vertex(a, b); // definisce il vertice (a, b) della figura
-    vertex(c, d); // definisce il vertice (c, d)
-    vertex(e, f); // definisce il vertice (e, f)
-    // ecc.
-    endShape(); // chiude la costruzione della figura</code></pre>
+vertex(a, b); // definisce il vertice (a, b) della figura
+vertex(c, d); // definisce il vertice (c, d)
+vertex(e, f); // definisce il vertice (e, f)
+// ecc.
+endShape(); // chiude la costruzione della figura</code></pre>
 
                 <a href="https://editor.p5js.org/bradwave.mb/sketches/dbI6naCjo" class="segnavia-box" target="_blank">
                     <span class="material-symbols-outlined segnavia-icon">hiking</span>
@@ -269,7 +276,7 @@
                 </ol>
 
                 <pre><code>let R = [100, 50, 40, 20, 10, 20];
-    let v = [1, 2, 3, -1, -2, -3];</code></pre>
+let v = [1, 2, 3, -1, -2, -3];</code></pre>
 
                 <ol start="16">
                     <li>Provate a modificare i valori di <code>R</code> e <code>v</code>.</li>
@@ -290,6 +297,11 @@
                         <span class="segnavia-action">Ecco un segnavia</span>
                     </div>
                 </a>
+
+                <hr style="margin: 3rem 0; border: none; border-top: 2px solid var(--border-color);">
+
+                <p>Abbiamo imparato a rappresentare polinomi trigonometrici in p5.js, visualizzando concatenazioni di punti rotanti con raggi, velocità angolari e fasi personalizzabili. Nella prossima parte, implementeremo la <strong>trasformata discreta di Fourier</strong> per ricostruire disegni realizzati a mano libera.</p>
+
             </main>
 
             <aside class="sidebar">
@@ -297,14 +309,10 @@
                     <h4><span class="material-symbols-outlined">article</span> Indice</h4>
                     <ul>
                         <li><a href="index.html"><span class="material-symbols-outlined">home</span> Home</a></li>
-                        <li><a href="intro-desmos.html"><span class="part-label">Parte 1</span> Primi passi con
-                                Desmos</a></li>
-                        <li><a href="intro-p5.html" class="current"><span class="part-label">Parte 2</span> In cammino
-                                con p5.js!</a></li>
-                        <li><a href="trasformando-con-fourier.html"><span class="part-label">Parte 3</span> Trasformando
-                                con Fourier</a></li>
-                        <li><a href="fourier-mano-libera.html"><span class="part-label">Parte 4</span> Fourier a mano
-                                libera</a></li>
+                        <li><a href="primi-passi-con-desmos.html"><span class="part-label">Parte 1</span> Primi passi con Desmos</a></li>
+                        <li><a href="disegnare-di-tutto-con-desmos.html"><span class="part-label">Parte 2</span> Disegnare di tutto con Desmos</a></li>
+                        <li><a href="in-cammino-con-p5.html" class="current"><span class="part-label">Parte 3</span> In cammino con p5.js!</a></li>
+                        <li><a href="fourier-mano-libera.html"><span class="part-label">Parte 4</span> Fourier a mano libera</a></li>
                     </ul>
                 </nav>
                 <nav class="sidebar-toc">
